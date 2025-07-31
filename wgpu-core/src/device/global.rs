@@ -1866,13 +1866,13 @@ impl Global {
                     view_formats: hal_view_formats,
                 };
 
-                if let Err(error) = validate_surface_configuration(
-                    &mut hal_config,
-                    &caps,
-                    device.limits.max_texture_dimension_2d,
-                ) {
-                    break 'error error;
-                }
+                // if let Err(error) = validate_surface_configuration(
+                //     &mut hal_config,
+                //     &caps,
+                //     device.limits.max_texture_dimension_2d,
+                // ) {
+                //     break 'error error;
+                // }
 
                 // Wait for all work to finish before configuring the surface.
                 let snatch_guard = device.snatchable_lock.read();
